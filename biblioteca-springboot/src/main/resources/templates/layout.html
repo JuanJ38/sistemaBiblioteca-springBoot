@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sistema de Biblioteca</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <script th:src="@{/js/app.js}"></script>
+</head>
+<body>
+
+<header class="header">
+    <div class="header-brand">
+        <div class="header-icon">📚</div>
+        <span class="header-title">Sistema de Biblioteca</span>
+    </div>
+    <div class="header-right">
+        <div class="header-user">
+            <div class="user-avatar" sec:authentication="name">A</div>
+            <span sec:authentication="name">usuario</span>
+        </div>
+        <div class="theme-toggle">
+            <span class="toggle-icon">🌙</span>
+            <button class="toggle-track" id="theme-toggle" aria-label="Cambiar tema">
+                <span class="toggle-thumb"></span>
+            </button>
+            <span class="toggle-icon" id="theme-icon">🌙</span>
+        </div>
+        <form th:action="@{/logout}" method="post" style="display:inline;">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+            <button type="submit" class="btn-logout">Salir</button>
+        </form>
+    </div>
+</header>
+
+<div class="layout">
+    <nav class="sidebar">
+        <div class="sidebar-section">Menú principal</div>
+        <a th:href="@{/libros}" class="sidebar-link">
+            <span class="sidebar-icon">📖</span>
+            <span>Libros</span>
+        </a>
+        <a th:href="@{/prestamos}" class="sidebar-link">
+            <span class="sidebar-icon">🔄</span>
+            <span>Préstamos</span>
+        </a>
+        <a th:href="@{/usuarios}" class="sidebar-link" sec:authorize="hasRole('ADMIN')">
+            <span class="sidebar-icon">👥</span>
+            <span>Usuarios</span>
+        </a>
+        <div class="sidebar-section" style="margin-top:auto;">Exportar</div>
+        <a th:href="@{/api/exportar/libros/excel}" class="sidebar-link btn-export">
+            <span class="sidebar-icon">📊</span>
+            <span>Excel Libros</span>
+        </a>
+        <a th:href="@{/api/exportar/libros/pdf}" class="sidebar-link btn-export">
+            <span class="sidebar-icon">📄</span>
+            <span>PDF Libros</span>
+        </a>
+    </nav>
+    <main class="content" th:fragment="content">
+    </main>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+# Compilación de Java (Maven)
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Configuración de IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+gen/
+
+# Archivos del Sistema Operativo
+Status.txt
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Archivos temporales de Spring Boot
+.mvn/
+mvnw
+mvnw.cmd
