@@ -865,3 +865,92 @@ tbody tr:last-child td { border-bottom: none; }
 }
 
 .card { animation: fadeIn 0.35s ease; }
+
+
+/* =========================================
+   RESPONSIVE MÓVIL
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Ocultar sidebar en móvil */
+    .sidebar {
+        display: none;
+    }
+
+    /* El contenido ocupa todo el ancho */
+    .content {
+        padding: 12px;
+    }
+
+    /* Header más compacto */
+    .header-title {
+        font-size: 13px;
+    }
+
+    .header-right {
+        gap: 8px;
+    }
+
+    /* Stats en 2 columnas en móvil */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    /* Cards sin tanto padding */
+    .card {
+        padding: 14px;
+    }
+
+    /* Card header en columna */
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Botones en columna */
+    .btn-group {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    /* Search bar ocupa todo el ancho */
+    .search-bar {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    /* Tabla — scroll horizontal */
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 500px;
+    }
+
+    /* Formularios ocupan todo el ancho */
+    .form-card {
+        max-width: 100%;
+    }
+
+    .form-control {
+        max-width: 100%;
+    }
+
+    /* Botón logout más pequeño */
+    .btn-logout {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    /* Page title más pequeño */
+    .page-title {
+        font-size: 15px;
+    }
+}
