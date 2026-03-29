@@ -11,13 +11,19 @@
             document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
+    <style>
+        @media (max-width: 600px) {
+            .login-panel-izq { display: none !important; }
+            .login-panel-der { padding: 32px 24px !important; }
+        }
+    </style>
 </head>
 <body style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg-primary);">
 
-<div style="display:flex;width:900px;max-width:98vw;min-height:560px;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.18);border:1px solid var(--border-color);">
+<div style="display:flex;flex-wrap:wrap;width:900px;max-width:100%;min-height:560px;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,0.18);border:1px solid var(--border-color);">
 
     <!-- PANEL IZQUIERDO -->
-    <div style="width:380px;flex-shrink:0;background:linear-gradient(160deg,#0f3460 0%,#16213e 60%,#1a1a2e 100%);padding:48px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;">
+    <div class="login-panel-izq" style="width:380px;flex-shrink:0;background:linear-gradient(160deg,#0f3460 0%,#16213e 60%,#1a1a2e 100%);padding:48px 40px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;">
         <div style="width:72px;height:72px;background:rgba(0,150,150,0.85);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:20px;box-shadow:0 8px 24px rgba(0,150,150,0.4);">📚</div>
         <h1 style="color:white;font-size:22px;font-weight:700;text-align:center;margin-bottom:8px;">Biblioteca Central</h1>
         <p style="color:#8b949e;font-size:13px;text-align:center;line-height:1.6;margin-bottom:36px;">Sistema de gestión de libros, usuarios y préstamos</p>
@@ -47,7 +53,7 @@
     </div>
 
     <!-- PANEL DERECHO -->
-    <div style="flex:1;background:var(--bg-card);padding:48px 44px;display:flex;flex-direction:column;justify-content:center;">
+    <div class="login-panel-der" style="flex:1;background:var(--bg-card);padding:48px 44px;display:flex;flex-direction:column;justify-content:center;">
 
         <!-- Toggle dark/light -->
         <div style="position:absolute;top:20px;right:24px;display:flex;align-items:center;gap:8px;">
