@@ -954,3 +954,42 @@ tbody tr:last-child td { border-bottom: none; }
         font-size: 15px;
     }
 }
+/* Botón hamburguesa — solo visible en móvil */
+.btn-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+@media (max-width: 768px) {
+    .btn-hamburger {
+        display: block;
+    }
+    .sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 240px;
+        height: 100vh;
+        z-index: 999;
+        padding-top: 60px;
+    }
+    .sidebar.open {
+        display: flex;
+    }
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 998;
+    }
+    .sidebar-overlay.open {
+        display: block;
+    }
+}

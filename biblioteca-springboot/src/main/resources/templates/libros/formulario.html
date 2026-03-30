@@ -13,9 +13,18 @@
     </script>
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
+
+<div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+<script>
+    function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('open');
+        document.getElementById('overlay').classList.toggle('open');
+    }
+</script>
 <body>
 <header class="header">
     <div class="header-brand">
+        <button class="btn-hamburger" onclick="toggleSidebar()">☰</button>
         <div class="header-icon">📚</div>
         <span class="header-title">Sistema de Biblioteca</span>
     </div>
