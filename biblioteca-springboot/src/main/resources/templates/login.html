@@ -86,8 +86,15 @@
                 <label class="form-label">Contraseña</label>
                 <div style="position:relative;">
                     <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:15px;pointer-events:none;">🔒</span>
-                    <input type="password" name="password" class="form-control" style="padding-left:38px;"
+                    <input type="password" name="password" id="password-input"  class="form-control" style="padding-left:38px;"
                            placeholder="••••••••" required autocomplete="current-password"/>
+
+                    <button type="button" id="toggle-password"
+                            style="position:absolute;right:10px;top:50%;transform:translateY(-50%);
+                   background:none;border:none;cursor:pointer;font-size:16px;
+                   color:var(--text-muted);">👁️</button>
+
+
                 </div>
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:13px;font-size:15px;margin-top:8px;border-radius:8px;">
@@ -98,7 +105,7 @@
     </div>
 </div>
 
-<script th:src="@{/js/app.js}"></script>
+
 <script>
     // Ajustar toggle thumb segun tema
     (function() {
@@ -122,6 +129,18 @@
                 syncToggle();
             });
         }
+        // Ojito — mostrar/ocultar contraseña
+var togglePwd = document.getElementById('toggle-password');
+var pwdInput  = document.getElementById('password-input');
+if (togglePwd && pwdInput) {
+    togglePwd.addEventListener('click', function() {
+        var visible = pwdInput.type === 'text';
+        pwdInput.type = visible ? 'password' : 'text';
+        togglePwd.textContent = visible ? '👁️' : '🙈';
+    });
+}
+
+
     })();
 </script>
 </body>
