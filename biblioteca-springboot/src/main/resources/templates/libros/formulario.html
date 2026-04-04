@@ -80,6 +80,7 @@
             <form th:action="${libro.id != null ? '/libros/actualizar' : '/libros/guardar'}"
                   th:object="${libro}" method="post">
                 <input type="hidden" th:field="*{id}"/>
+                <input type="hidden" th:field="*{disponible}"/>
                 <div class="form-group">
                     <label class="form-label">Título *</label>
                     <input type="text" th:field="*{titulo}" class="form-control" placeholder="Ej: Cien años de soledad"/>
