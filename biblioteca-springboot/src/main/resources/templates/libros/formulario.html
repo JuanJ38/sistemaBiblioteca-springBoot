@@ -35,7 +35,7 @@
         </div>
         <span id="theme-icon" style="font-size:15px;line-height:1;">🌙</span>
         <button id="theme-toggle" aria-label="Cambiar tema"
-            style="width:44px;height:24px;border-radius:12px;position:relative;cursor:pointer;border:none;transition:background 0.3s;background:#30363d;flex-shrink:0;">
+                style="width:44px;height:24px;border-radius:12px;position:relative;cursor:pointer;border:none;transition:background 0.3s;background:#30363d;flex-shrink:0;">
             <span id="toggle-thumb" style="width:18px;height:18px;background:white;border-radius:50%;position:absolute;top:3px;left:3px;transition:left 0.3s;box-shadow:0 2px 4px rgba(0,0,0,0.3);display:block;"></span>
         </button>
         <form th:action="@{/logout}" method="post" style="display:inline;">
@@ -72,7 +72,7 @@
     </nav>
 
     <main class="content fade-in">
-        <div class="card form-card">
+        <div class="card form-card" style="max-width:560px;">
             <div class="page-title" style="margin-bottom:24px;">
                 <div class="page-title-icon">📖</div>
                 <span th:text="${libro.id != null ? 'Editar Libro' : 'Agregar Libro'}"></span>
@@ -81,16 +81,46 @@
                   th:object="${libro}" method="post">
                 <input type="hidden" th:field="*{id}"/>
                 <input type="hidden" th:field="*{disponible}"/>
+
                 <div class="form-group">
                     <label class="form-label">Título *</label>
-                    <input type="text" th:field="*{titulo}" class="form-control" placeholder="Ej: Cien años de soledad"/>
+                    <input type="text" th:field="*{titulo}" class="form-control"
+                           placeholder="Ej: Cien años de soledad"/>
                     <div class="form-error" th:if="${#fields.hasErrors('titulo')}" th:errors="*{titulo}">⚠️ Error</div>
                 </div>
+
                 <div class="form-group">
                     <label class="form-label">Autor *</label>
-                    <input type="text" th:field="*{autor}" class="form-control" placeholder="Ej: Gabriel García Márquez"/>
+                    <input type="text" th:field="*{autor}" class="form-control"
+                           placeholder="Ej: Gabriel García Márquez"/>
                     <div class="form-error" th:if="${#fields.hasErrors('autor')}" th:errors="*{autor}">⚠️ Error</div>
                 </div>
+
+                <div class="form-group">
+                    <label class="form-label">URL de imagen de portada</label>
+                    <input type="text" th:field="*{imagen}" class="form-control"
+                           placeholder="https://ejemplo.com/portada.jpg"/>
+                    <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">
+                        Pega la URL de una imagen de internet (opcional)
+                    </div>
+                    <!-- Preview de imagen si ya tiene URL -->
+                    <div th:if="${libro.imagen != null and !#strings.isEmpty(libro.imagen)}"
+                         style="margin-top:10px;">
+                        <img th:src="${libro.imagen}" alt="Portada"
+                             style="width:80px; height:110px; object-fit:cover;
+                                    border-radius:6px; border:1px solid var(--border-color);"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Reseña</label>
+                    <textarea th:field="*{resena}" class="form-control" rows="4"
+                              placeholder="Breve descripción del libro..."></textarea>
+                    <div style="font-size:11px; color:var(--text-muted); margin-top:4px;">
+                        Máximo 1000 caracteres (opcional)
+                    </div>
+                </div>
+
                 <div class="btn-group" style="margin-top:8px;">
                     <button type="submit" class="btn btn-primary">💾 Guardar</button>
                     <a th:href="@{/libros}" class="btn btn-secondary">✕ Cancelar</a>

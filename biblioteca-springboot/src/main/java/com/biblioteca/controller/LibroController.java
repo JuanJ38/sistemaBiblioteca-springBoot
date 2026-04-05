@@ -25,6 +25,22 @@ public class LibroController {
         return "libros/lista";
     }
 
+    // ✅ Ambos pueden ver el detalle de un libro
+    @GetMapping("/detalle/{id}")
+    public String detalle(@PathVariable Integer id, Model model, RedirectAttributes redirectAttrs) {
+        return libroService.buscarPorId(id)
+                .map(libro -> {
+                    model.addAttribute("libro", libro);
+                    return "libros/detalle";
+                })
+                .orElseGet(() -> {
+                    redirectAttrs.addFlashAttribute("error", "Libro no encontrado");
+                    return "redirect:/libros";
+                });
+    }
+
+
+
     // 🔒 Solo ADMIN
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/nuevo")

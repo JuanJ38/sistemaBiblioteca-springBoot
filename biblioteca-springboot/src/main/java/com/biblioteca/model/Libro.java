@@ -31,4 +31,10 @@ public class Libro {
     @Builder.Default
     @Column(nullable = false)
     private boolean disponible = true;
+
+    @Column
+    private String imagen;        // URL de portada del libro
+
+    @Column(length = 1000)
+    private String resena;        // Breve reseña del libro
 }
