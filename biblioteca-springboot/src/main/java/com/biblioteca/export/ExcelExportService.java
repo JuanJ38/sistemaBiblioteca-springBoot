@@ -74,9 +74,11 @@ public class ExcelExportService {
             totalValue.setCellValue(libros.size());
 
             // Autoajustar columnas
-            for (int i = 0; i < columnas.length; i++) {
-                sheet.autoSizeColumn(i);
-            }
+            // Anchos fijos — compatibles con Railway/Linux
+            sheet.setColumnWidth(0, 8 * 256);    // ID
+            sheet.setColumnWidth(1, 40 * 256);   // Título
+            sheet.setColumnWidth(2, 30 * 256);   // Autor
+            sheet.setColumnWidth(3, 15 * 256);   // Disponible
 
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             workbook.write(out);
@@ -139,9 +141,11 @@ public class ExcelExportService {
             totalRow.createCell(0).setCellValue("Total préstamos activos:");
             totalRow.createCell(1).setCellValue(prestamos.size());
 
-            for (int i = 0; i < columnas.length; i++) {
-                sheet.autoSizeColumn(i);
-            }
+            // Anchos fijos — compatibles con Railway/Linux
+            sheet.setColumnWidth(0, 8 * 256);    // ID
+            sheet.setColumnWidth(1, 40 * 256);   // Libro
+            sheet.setColumnWidth(2, 30 * 256);   // Usuario
+            sheet.setColumnWidth(3, 20 * 256);   // Fecha Préstamo
 
             ByteArrayOutputStream out = new ByteArrayOutputStream();
             workbook.write(out);
