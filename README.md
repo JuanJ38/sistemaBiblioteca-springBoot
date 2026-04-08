@@ -239,3 +239,6 @@ Juan Jose H.
 
 Desarrollado como proyecto académico 
 Stack: Java 17 + Spring Boot 3 + MSQL
+
+
+<img width="2352" height="1244" alt="image" src="https://github.com/user-attachments/assets/4de8ac34-2884-40d8-bea5-1acf2b699a8b" />
