@@ -17,7 +17,7 @@ Sistema de gestión de biblioteca desarrollado con Java 17 y Spring Boot 3, que 
 - **Lombok** — reducción de código repetitivo
 - **Swagger / OpenAPI** — documentación de la API
 - **Spring Boot Actuator** — monitoreo de la aplicación
-- **SQL Server** — base de datos
+- **MSQL** — base de datos
 - **Maven** — gestión de dependencias
 - **JUnit 5 + Mockito** — pruebas unitarias
 
@@ -74,7 +74,7 @@ src/main/java/com/biblioteca/
 
 - Java 17 o superior
 - Maven 3.6+
-- SQL Server (local en puerto 1433)
+- MSQL
 - IntelliJ IDEA o Eclipse
 
 ---
@@ -83,7 +83,7 @@ src/main/java/com/biblioteca/
 
 La base de datos `BibliotecaDB` debe tener estas tablas:
 
-```sql
+```
 CREATE TABLE libros (
     id INT IDENTITY PRIMARY KEY,
     titulo NVARCHAR(255) NOT NULL,
@@ -237,4 +237,4 @@ Las pruebas cubren:
 ## Autor
 
 Desarrollado como proyecto académico para prácticas preprofesionales.
-Stack: Java 17 + Spring Boot 3 + SQL Server
+Stack: Java 17 + Spring Boot 3 + MSQL
