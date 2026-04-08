@@ -1,6 +1,6 @@
 # Sistema de Biblioteca — Spring Boot
 
-Sistema de gestión de biblioteca desarrollado con Java 17 y Spring Boot 3, que incluye API REST, autenticación JWT, Spring Security, Spring Data JPA y documentación con Swagger.
+Sistema de gestión de biblioteca desarrollado con Java 17 y Spring Boot 3, que incluye API REST, autenticación JWT, Spring Security, Spring Data JPA 
 
 ---
 
