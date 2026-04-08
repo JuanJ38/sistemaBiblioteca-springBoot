@@ -235,6 +235,7 @@ Las pruebas cubren:
 ---
 
 ## Autor
+Juan Jose H.
 
-Desarrollado como proyecto académico para prácticas preprofesionales.
+Desarrollado como proyecto académico 
 Stack: Java 17 + Spring Boot 3 + MSQL
