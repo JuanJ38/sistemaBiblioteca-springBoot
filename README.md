@@ -243,19 +243,25 @@ Juan Jose H.
 Stack: Java 17 + Spring Boot 3 + MSQL
 
 
-<img width="2352" height="1244" alt="image" src="https://github.com/user-attachments/assets/4de8ac34-2884-40d8-bea5-1acf2b699a8b" />
-
-<img width="2404" height="1223" alt="image" src="https://github.com/user-attachments/assets/1ee2339e-e32a-4ad7-8f4a-15b994a52148" />
-
+<img width="2513" height="1250" alt="image" src="https://github.com/user-attachments/assets/87eecde0-8f18-4885-a6f4-653f6917dc1c" />
+#########
 
 
-<img width="2483" height="1252" alt="image" src="https://github.com/user-attachments/assets/673f8fb5-7077-40c0-b8da-c257aff46bb6" />
+<img width="2486" height="1198" alt="image" src="https://github.com/user-attachments/assets/d3cd216e-359d-486a-b41e-5b9ac8db8ee3" />
 
-<img width="2493" height="1247" alt="image" src="https://github.com/user-attachments/assets/5e8b2db7-4e96-4500-bc06-c24ac12c681c" />
+##############
 
-<img width="2526" height="1087" alt="image" src="https://github.com/user-attachments/assets/557967a3-997f-4791-b66f-eef9755eff4b" />
+<img width="2535" height="1228" alt="image" src="https://github.com/user-attachments/assets/07ee3dd0-b5f5-4bc3-8396-050500274fb3" />
 
-<img width="2559" height="950" alt="image" src="https://github.com/user-attachments/assets/b0599c7c-de04-4090-b1f5-2c9594151d8b" />
+####################
+
+<img width="2530" height="978" alt="image" src="https://github.com/user-attachments/assets/ff55393e-2781-49fe-bc00-f277d629ef2f" />
+
+##################
+
+<img width="2513" height="1008" alt="image" src="https://github.com/user-attachments/assets/5377650b-5dc6-4bf1-8247-b731d9bf268e" />
+
+
 
 
 
