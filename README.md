@@ -1,6 +1,8 @@
 # Sistema de Biblioteca — Spring Boot
 
-Sistema de gestión de biblioteca desarrollado con Java 17 y Spring Boot 3, que incluye API REST, autenticación JWT, Spring Security, Spring Data JPA y documentación con Swagger.
+Desplegado  https://sistemabiblioteca-springboot-production.up.railway.app/login
+
+Sistema de gestión de biblioteca desarrollado con Java 17 y Spring Boot 3, que incluye API REST, autenticación JWT, Spring Security, Spring Data JPA 
 
 ---
 
@@ -17,7 +19,7 @@ Sistema de gestión de biblioteca desarrollado con Java 17 y Spring Boot 3, que 
 - **Lombok** — reducción de código repetitivo
 - **Swagger / OpenAPI** — documentación de la API
 - **Spring Boot Actuator** — monitoreo de la aplicación
-- **SQL Server** — base de datos
+- **MSQL** — base de datos
 - **Maven** — gestión de dependencias
 - **JUnit 5 + Mockito** — pruebas unitarias
 
@@ -74,7 +76,7 @@ src/main/java/com/biblioteca/
 
 - Java 17 o superior
 - Maven 3.6+
-- SQL Server (local en puerto 1433)
+- MSQL
 - IntelliJ IDEA o Eclipse
 
 ---
@@ -83,7 +85,7 @@ src/main/java/com/biblioteca/
 
 La base de datos `BibliotecaDB` debe tener estas tablas:
 
-```sql
+```
 CREATE TABLE libros (
     id INT IDENTITY PRIMARY KEY,
     titulo NVARCHAR(255) NOT NULL,
@@ -235,6 +237,26 @@ Las pruebas cubren:
 ---
 
 ## Autor
+Juan Jose H.
 
-Desarrollado como proyecto académico para prácticas preprofesionales.
-Stack: Java 17 + Spring Boot 3 + SQL Server
+
+Stack: Java 17 + Spring Boot 3 + MSQL
+
+
+<img width="2352" height="1244" alt="image" src="https://github.com/user-attachments/assets/4de8ac34-2884-40d8-bea5-1acf2b699a8b" />
+
+<img width="2404" height="1223" alt="image" src="https://github.com/user-attachments/assets/1ee2339e-e32a-4ad7-8f4a-15b994a52148" />
+
+
+
+<img width="2483" height="1252" alt="image" src="https://github.com/user-attachments/assets/673f8fb5-7077-40c0-b8da-c257aff46bb6" />
+
+<img width="2493" height="1247" alt="image" src="https://github.com/user-attachments/assets/5e8b2db7-4e96-4500-bc06-c24ac12c681c" />
+
+<img width="2526" height="1087" alt="image" src="https://github.com/user-attachments/assets/557967a3-997f-4791-b66f-eef9755eff4b" />
+
+<img width="2559" height="950" alt="image" src="https://github.com/user-attachments/assets/b0599c7c-de04-4090-b1f5-2c9594151d8b" />
+
+
+
+
