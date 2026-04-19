@@ -18,14 +18,14 @@ public class LibroController {
     @Autowired
     private LibroService libroService;
 
-    // ✅ Ambos pueden ver la lista
+    //  Ambos pueden ver la lista
     @GetMapping
     public String listar(Model model) {
         model.addAttribute("libros", libroService.obtenerTodos());
         return "libros/lista";
     }
 
-    // ✅ Ambos pueden ver el detalle de un libro
+    //  Ambos pueden ver el detalle de un libro
     @GetMapping("/detalle/{id}")
     public String detalle(@PathVariable Integer id, Model model, RedirectAttributes redirectAttrs) {
         return libroService.buscarPorId(id)
@@ -41,7 +41,7 @@ public class LibroController {
 
 
 
-    // 🔒 Solo ADMIN
+    //  Solo ADMIN
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/nuevo")
     public String nuevo(Model model) {
@@ -49,7 +49,7 @@ public class LibroController {
         return "libros/formulario";
     }
 
-    // 🔒 Solo ADMIN
+    //  Solo ADMIN
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/guardar")
     public String guardar(@Valid @ModelAttribute("libro") Libro libro,
@@ -63,7 +63,7 @@ public class LibroController {
         return "redirect:/libros";
     }
 
-    // 🔒 Solo ADMIN
+    //  Solo ADMIN
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable Integer id, Model model, RedirectAttributes redirectAttrs) {
@@ -78,7 +78,7 @@ public class LibroController {
                 });
     }
 
-    // 🔒 Solo ADMIN
+    //  Solo ADMIN
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/actualizar")
     public String actualizar(@Valid @ModelAttribute("libro") Libro libro,
@@ -92,7 +92,7 @@ public class LibroController {
         return "redirect:/libros";
     }
 
-    // 🔒 Solo ADMIN
+    //  Solo ADMIN
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/eliminar/{id}")
     public String eliminar(@PathVariable Integer id, RedirectAttributes redirectAttrs) {
